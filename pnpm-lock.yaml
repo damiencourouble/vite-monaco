@@ -14,7 +14,13 @@ importers:
       '@codingame/monaco-vscode-configuration-service-override':
         specifier: ^6.0.3
         version: 6.0.3
+      '@codingame/monaco-vscode-editor-service-override':
+        specifier: ^6.0.3
+        version: 6.0.3
       '@codingame/monaco-vscode-files-service-override':
+        specifier: ^6.0.3
+        version: 6.0.3
+      '@codingame/monaco-vscode-keybindings-service-override':
         specifier: ^6.0.3
         version: 6.0.3
       '@codingame/monaco-vscode-python-default-extension':
@@ -40,13 +46,10 @@ importers:
         version: '@codingame/monaco-vscode-editor-api@6.0.3'
       monaco-editor-wrapper:
         specifier: ^5.3.1
-        version: 5.3.1(@codingame/monaco-vscode-api@6.0.3)(@codingame/monaco-vscode-editor-api@6.0.3)(monaco-languageclient@8.6.0(@codingame/monaco-vscode-api@6.0.3)(@codingame/monaco-vscode-editor-api@6.0.3))
+        version: 5.3.1(@codingame/monaco-vscode-editor-api@6.0.3)(monaco-languageclient@8.6.0(@codingame/monaco-vscode-editor-api@6.0.3))
       monaco-languageclient:
         specifier: ^8.6.0
-        version: 8.6.0(@codingame/monaco-vscode-api@6.0.3)(@codingame/monaco-vscode-editor-api@6.0.3)
-      vscode:
-        specifier: npm:@codingame/monaco-vscode-api@~6.0.3
-        version: '@codingame/monaco-vscode-api@6.0.3'
+        version: 8.6.0(@codingame/monaco-vscode-editor-api@6.0.3)
       vscode-languageclient:
         specifier: ^9.0.1
         version: 9.0.1
@@ -112,6 +115,9 @@ packages:
 
   '@codingame/monaco-vscode-host-service-override@6.0.3':
     resolution: {integrity: sha512-/fJQZMisAXjOohSddbwmg1bhczOMJdqut4UjGrdpApZAPGi2KPKqA64gi4z7bUMi2pmMMWqJZ33truvFA8WNXg==}
+
+  '@codingame/monaco-vscode-keybindings-service-override@6.0.3':
+    resolution: {integrity: sha512-7eCDiJVjw/OdNtKsv0idme6GDPAPzZrvY5edP8Qa7s+Pt/+HQTIWDJUWC6vRQxyQYEbCTTywfRqksY3emEuHMQ==}
 
   '@codingame/monaco-vscode-language-pack-cs@6.0.3':
     resolution: {integrity: sha512-u53tw4OZVtMgyWCUGtCBsJCdOchJmdKqugpss+DA49nDcmsUpr0tNgtvCJOg1keGUN6rZ/EKi0GFahq3WQjExg==}
@@ -881,6 +887,11 @@ snapshots:
     dependencies:
       vscode: '@codingame/monaco-vscode-api@6.0.3'
 
+  '@codingame/monaco-vscode-keybindings-service-override@6.0.3':
+    dependencies:
+      '@codingame/monaco-vscode-files-service-override': 6.0.3
+      vscode: '@codingame/monaco-vscode-api@6.0.3'
+
   '@codingame/monaco-vscode-language-pack-cs@6.0.3':
     dependencies:
       vscode: '@codingame/monaco-vscode-api@6.0.3'
@@ -1350,7 +1361,7 @@ snapshots:
     dependencies:
       brace-expansion: 2.0.1
 
-  monaco-editor-wrapper@5.3.1(@codingame/monaco-vscode-api@6.0.3)(@codingame/monaco-vscode-editor-api@6.0.3)(monaco-languageclient@8.6.0(@codingame/monaco-vscode-api@6.0.3)(@codingame/monaco-vscode-editor-api@6.0.3)):
+  monaco-editor-wrapper@5.3.1(@codingame/monaco-vscode-editor-api@6.0.3)(monaco-languageclient@8.6.0(@codingame/monaco-vscode-editor-api@6.0.3)):
     dependencies:
       '@codingame/monaco-vscode-configuration-service-override': 6.0.3
       '@codingame/monaco-vscode-editor-service-override': 6.0.3
@@ -1373,20 +1384,18 @@ snapshots:
       '@codingame/monaco-vscode-theme-defaults-default-extension': 6.0.3
       '@codingame/monaco-vscode-theme-service-override': 6.0.3
       monaco-editor: '@codingame/monaco-vscode-editor-api@6.0.3'
-      monaco-languageclient: 8.6.0(@codingame/monaco-vscode-api@6.0.3)(@codingame/monaco-vscode-editor-api@6.0.3)
-      vscode: '@codingame/monaco-vscode-api@6.0.3'
+      monaco-languageclient: 8.6.0(@codingame/monaco-vscode-editor-api@6.0.3)
       vscode-languageclient: 9.0.1
       vscode-languageserver-protocol: 3.17.5
       vscode-ws-jsonrpc: 3.3.2
 
-  monaco-languageclient@8.6.0(@codingame/monaco-vscode-api@6.0.3)(@codingame/monaco-vscode-editor-api@6.0.3):
+  monaco-languageclient@8.6.0(@codingame/monaco-vscode-editor-api@6.0.3):
     dependencies:
       '@codingame/monaco-vscode-extensions-service-override': 6.0.3
       '@codingame/monaco-vscode-languages-service-override': 6.0.3
       '@codingame/monaco-vscode-localization-service-override': 6.0.3
       '@codingame/monaco-vscode-model-service-override': 6.0.3
       monaco-editor: '@codingame/monaco-vscode-editor-api@6.0.3'
-      vscode: '@codingame/monaco-vscode-api@6.0.3'
       vscode-languageclient: 9.0.1
 
   nanoid@3.3.7: {}
